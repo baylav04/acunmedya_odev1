@@ -1,0 +1,22 @@
+﻿//odev1.5
+
+using System;
+using System.Text.RegularExpressions;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Şifreyi girin: ");
+        string password = Console.ReadLine();
+
+        if (password.Length < 8)
+            Console.WriteLine("Şifre en az 8 karakter uzunluğunda olmalıdır!");
+        else if (!Regex.IsMatch(password, @"[@#$%]"))
+            Console.WriteLine("Şifre en az bir özel karakter (@, #, $, %) içermelidir!");
+        else if (!Regex.IsMatch(password, @"[A-Z]"))
+            Console.WriteLine("Şifre en az bir büyük harf içermelidir!");
+        else
+            Console.WriteLine("Şifre güçlüdür!");
+    }
+}
