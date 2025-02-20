@@ -1,0 +1,24 @@
+﻿//odev1.1
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Gün numarası girin (1-7): ");
+        int dayNumber = Convert.ToInt32(Console.ReadLine());
+
+        switch (dayNumber)
+        {
+            case 1: Console.WriteLine("Pazartesi"); break;
+            case 2: Console.WriteLine("Salı"); break;
+            case 3: Console.WriteLine("Çarşamba"); break;
+            case 4: Console.WriteLine("Perşembe"); break;
+            case 5: Console.WriteLine("Cuma"); break;
+            case 6: Console.WriteLine("Cumartesi"); break;
+            case 7: Console.WriteLine("Pazar"); break;
+            default: Console.WriteLine("Geçersiz gün numarası!"); break;
+        }
+    }
+}
+
